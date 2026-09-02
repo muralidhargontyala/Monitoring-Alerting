@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Members</h1>
+
+<a class="button"
+   href="/members/add">
+   + Add Member
+</a>
+
+<table>
+
+<tr>
+    <th>Member No</th>
+    <th>Name</th>
+    <th>Father Name</th>
+    <th>Phone</th>
+    <th>Address</th>
+</tr>
+
+{% for member in members %}
+
+<tr>
+
+<td>{{ member.member_number }}</td>
+
+<td>{{ member.name }}</td>
+
+<td>{{ member.father_name }}</td>
+
+<td>{{ member.phone }}</td>
+
+<td>{{ member.address }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+{% endblock %}

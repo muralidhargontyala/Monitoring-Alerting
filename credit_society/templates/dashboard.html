@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Society Dashboard</h1>
+
+<div class="cards">
+
+    <div class="card">
+        <h3>Members</h3>
+        <p>{{ member_count }}</p>
+    </div>
+
+    <div class="card">
+        <h3>Total Savings</h3>
+        <p>₹{{ "%.2f"|format(total_savings) }}</p>
+    </div>
+
+    <div class="card">
+        <h3>Loan Outstanding</h3>
+        <p>₹{{ "%.2f"|format(total_loan) }}</p>
+    </div>
+
+    <div class="card">
+        <h3>Interest Collected</h3>
+        <p>₹{{ "%.2f"|format(total_interest) }}</p>
+    </div>
+
+    <div class="card">
+        <h3>Maintenance</h3>
+        <p>₹{{ "%.2f"|format(total_maintenance) }}</p>
+    </div>
+
+    <div class="card">
+        <h3>Recurring Deposit</h3>
+        <p>₹{{ "%.2f"|format(total_rd) }}</p>
+    </div>
+
+</div>
+
+<hr>
+
+<h2>Monthly Expected Collection</h2>
+
+<table>
+
+<tr>
+    <th>Description</th>
+    <th>Amount</th>
+</tr>
+
+<tr>
+    <td>Member Savings</td>
+    <td>₹39,000</td>
+</tr>
+
+<tr>
+    <td>Maintenance</td>
+    <td>₹39,000</td>
+</tr>
+
+<tr>
+    <td>Recurring Deposit</td>
+    <td>₹20,000</td>
+</tr>
+
+</table>
+
+{% endblock %}

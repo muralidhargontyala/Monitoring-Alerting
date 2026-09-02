@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f6f8;
+}
+
+nav {
+    background: #1f2937;
+    padding: 15px;
+}
+
+nav h2 {
+    color: white;
+    display: inline;
+    margin-right: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.container {
+    width: 90%;
+    margin: 30px auto;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(200px, 1fr));
+
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #ccc;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card p {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    margin-top: 20px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background: #e5e7eb;
+}
+
+form {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    max-width: 600px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+button,
+.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+}

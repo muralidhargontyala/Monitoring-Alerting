@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Give New Loan</h1>
+
+<form method="POST">
+
+<label>Loan Number</label>
+
+<input
+    type="text"
+    name="loan_number"
+    required
+>
+
+
+<label>Member</label>
+
+<select name="member_id">
+
+{% for member in members %}
+
+<option value="{{ member.id }}">
+
+{{ member.member_number }}
+-
+{{ member.name }}
+
+</option>
+
+{% endfor %}
+
+</select>
+
+
+<label>Loan Amount</label>
+
+<input
+    type="number"
+    name="loan_amount"
+    step="0.01"
+    required
+>
+
+
+<p>
+Interest Rate:
+<strong>1%</strong>
+</p>
+
+
+<button type="submit">
+
+Create Loan
+
+</button>
+
+</form>
+
+{% endblock %}

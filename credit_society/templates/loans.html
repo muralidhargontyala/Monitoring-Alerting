@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Loans</h1>
+
+<a class="button"
+   href="/loans/add">
+   + Give New Loan
+</a>
+
+<table>
+
+<tr>
+
+<th>Loan No</th>
+<th>Member</th>
+<th>Loan Amount</th>
+<th>Outstanding</th>
+<th>Interest</th>
+<th>Status</th>
+<th>Action</th>
+
+</tr>
+
+{% for loan in loans %}
+
+<tr>
+
+<td>{{ loan.loan_number }}</td>
+
+<td>{{ loan.member.name }}</td>
+
+<td>₹{{ loan.loan_amount }}</td>
+
+<td>₹{{ loan.outstanding_principal }}</td>
+
+<td>{{ loan.interest_rate }}%</td>
+
+<td>{{ loan.status }}</td>
+
+<td>
+
+<a href="/loans/{{ loan.id }}/payment">
+
+Payment
+
+</a>
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Add Member</h1>
+
+<form method="POST">
+
+<label>Member Number</label>
+
+<input
+    type="text"
+    name="member_number"
+    required
+>
+
+
+<label>Member Name</label>
+
+<input
+    type="text"
+    name="name"
+    required
+>
+
+
+<label>Father / Husband Name</label>
+
+<input
+    type="text"
+    name="father_name"
+>
+
+
+<label>Phone</label>
+
+<input
+    type="text"
+    name="phone"
+>
+
+
+<label>Address</label>
+
+<textarea name="address"></textarea>
+
+
+<button type="submit">
+    Save Member
+</button>
+
+</form>
+
+{% endblock %}

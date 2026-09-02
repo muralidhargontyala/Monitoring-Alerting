@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Recurring Deposit</h1>
+
+<form method="POST">
+
+<label>Month</label>
+
+<input
+    type="month"
+    name="month"
+    required
+>
+
+
+<label>Amount</label>
+
+<input
+    type="number"
+    name="amount"
+    value="20000"
+    step="0.01"
+>
+
+
+<label>Bank Name</label>
+
+<input
+    type="text"
+    name="bank_name"
+>
+
+
+<label>Reference Number</label>
+
+<input
+    type="text"
+    name="reference_number"
+>
+
+
+<label>Remarks</label>
+
+<textarea name="remarks"></textarea>
+
+
+<button type="submit">
+
+Save RD
+
+</button>
+
+</form>
+
+
+<h2>Recurring Deposits</h2>
+
+<table>
+
+<tr>
+
+<th>Month</th>
+<th>Amount</th>
+<th>Bank</th>
+<th>Reference</th>
+
+</tr>
+
+{% for record in records %}
+
+<tr>
+
+<td>{{ record.month }}</td>
+<td>₹{{ record.amount }}</td>
+<td>{{ record.bank_name }}</td>
+<td>{{ record.reference_number }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+{% endblock %}

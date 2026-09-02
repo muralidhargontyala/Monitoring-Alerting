@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Loan Payment</h1>
+
+<h3>
+Loan Number: {{ loan.loan_number }}
+</h3>
+
+<h3>
+Member: {{ loan.member.name }}
+</h3>
+
+<h3>
+Outstanding Principal:
+₹{{ loan.outstanding_principal }}
+</h3>
+
+<h3>
+Interest Rate:
+{{ loan.interest_rate }}%
+</h3>
+
+<form method="POST">
+
+<label>Principal Amount</label>
+
+<input
+    type="number"
+    name="principal_amount"
+    step="0.01"
+    required
+>
+
+
+<label>Receipt Number</label>
+
+<input
+    type="text"
+    name="receipt_number"
+>
+
+
+<button type="submit">
+
+Receive Loan Payment
+
+</button>
+
+</form>
+
+<p>
+The system will automatically calculate
+1% interest on the outstanding principal.
+</p>
+
+{% endblock %}
